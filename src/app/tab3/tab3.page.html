@@ -1,9 +1,46 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab Three
+      Minha Agenda
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-item *ngFor="let cal of calendars">
+    <ion-button icon-only item-start clear (click)="addEvent(cal)">
+      <ion-icon name="add"></ion-icon>
+    </ion-button>
+    {{  cal.name }}
+    <p>{{ cal.type }}</p>
+    <ion-button icon-only item-end clear (click)="openCal(cal)">
+      <ion-icon name="arrow-forward"></ion-icon>
+    </ion-button>
+  </ion-item>
+</ion-content>
+
+<!--google ionic 3-->
+
+<!--<ion-header>-->
+<!--  <ion-navbar color="primary">-->
+<!--    <ion-title>-->
+<!--      My Calendars-->
+<!--    </ion-title>-->
+<!--  </ion-navbar>-->
+<!--</ion-header>-->
+
+<!--<ion-content>-->
+
+<!--  <ion-list>-->
+<!--    <ion-item *ngFor="let cal of calendars" tappable>-->
+<!--      <button ion-button icon-only item-start clear (click)="addEvent(cal)">-->
+<!--        <ion-icon name="add"></ion-icon>-->
+<!--      </button>-->
+<!--      {{ cal.name }}-->
+<!--      <p>{{ cal.type }}</p>-->
+<!--      <button ion-button icon-only item-end clear (click)="openCal(cal)">-->
+<!--        <ion-icon name="arrow-forward"></ion-icon>-->
+<!--      </button>-->
+<!--    </ion-item>-->
+<!--  </ion-list>-->
+<!--</ion-content>-->

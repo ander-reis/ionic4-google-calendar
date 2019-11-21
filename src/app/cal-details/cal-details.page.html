@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+<!--    <ion-title>{{ calendars.name }}</ion-title>-->
+    <ion-title>Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card *ngFor="let event of events">
+    <ion-card-header>
+        {{event.title}}
+    </ion-card-header>
+
+    <ion-card-content>
+        <ion-list no-lines>
+            <ion-item>
+                <ion-icon name="calendar"></ion-icon> Inicio: {{ event.dtstart }}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="calendar"></ion-icon> Fim: {{ event.dtend }}
+            </ion-item>
+            <ion-item>
+                <ion-icon name="locate"></ion-icon> {{ event.eventLocation }}
+            </ion-item>
+        </ion-list>
+    </ion-card-content>
+</ion-card>
+</ion-content>

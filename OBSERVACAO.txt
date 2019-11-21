@@ -1,0 +1,7 @@
+1-instalado bibliotecas:
+    ionic cordova plugin add cordova-plugin-calendar
+    npm install @ionic-native/calendar
+
+2-privider Calendar em tab3.module.ts
+
+3-implementar tab3.page.ts
